@@ -149,6 +149,21 @@ export default function MobileApp() {
           {tab === "historico" && <HistoryView items={historico}/>} 
         </main>
 
+        <footer className="px-5 pb-3 text-center text-[11px] leading-relaxed text-neutral-500">
+          <p>
+            Fonte institucional de referência dos toques:{" "}
+            <a
+              href="https://escolatiradentescuiaba.com/toque-de-corneta/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-neutral-400 underline decoration-neutral-700 underline-offset-2 hover:text-amber-400"
+            >
+              Escola Estadual da Polícia Militar Tiradentes de Cuiabá
+            </a>.
+          </p>
+          <p className="mt-1">Aplicação independente, educacional e sem vínculo oficial com a instituição.</p>
+        </footer>
+
         <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md z-40 bg-neutral-900/95 backdrop-blur border-t border-neutral-800 px-2 pb-[max(.5rem,env(safe-area-inset-bottom))] pt-2 grid grid-cols-4">
           <NavButton active={tab === "treino"} icon={<Play/>} label="Treino" onClick={() => navigate("treino")}/>
           <NavButton active={tab === "prova"} icon={<GraduationCap/>} label="Prova" onClick={() => navigate("prova")}/>
